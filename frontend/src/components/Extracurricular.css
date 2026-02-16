@@ -1,0 +1,77 @@
+.extracurricular {
+  background: #f9fafb;
+}
+
+.activities-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.activities-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #2563eb;
+}
+
+.activity-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.activity-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #2563eb;
+}
+
+.activity-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.activity-content h3 {
+  color: #1f2937;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.organization {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.duration {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .activities-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .activity-marker {
+    left: -2rem;
+  }
+}
