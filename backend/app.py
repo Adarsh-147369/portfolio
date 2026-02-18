@@ -1,7 +1,8 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
 CORS(app)
 
 # Portfolio data
@@ -285,6 +286,15 @@ def contact():
         "success": True,
         "message": "Thank you for your message! I'll get back to you soon."
     })
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    """Serve React frontend"""
+    if path != "" and os.path.exists(app.static_folder + '/' + path):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
     import os
