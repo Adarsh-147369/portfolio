@@ -140,6 +140,14 @@ portfolio_data = {
             "technologies": ["Java", "Object-Oriented Programming", "Core Java Collections", "React"],
             "github": "https://github.com/Adarsh-147369/Smart-Expense-Tracker"
         }
+        {
+            "id": 6,
+            "title": "AI Startup validator",
+            "description": "It is a web-based platform that uses AI to analyze startup ideas and provide insights on market potential, competition, and risks, helping users make informed decisions quickly.",
+            "technologies": ["Python", "React", "Open Router", "JavaScript"],
+            "github": "https://github.com/Adarsh-147369/AI-Startup-Idea-Validator"
+            "Link":"https://ai-startup-idea-validator-j19z.onrender.com"
+        }
     ],
     "experience": [
         {
